@@ -14,6 +14,7 @@ RUN sed -i 's/\r//' /etc/service/consul/run
 RUN echo '/etc/service/consul/run' >> /etc/rc.d/rc.local
 
 # Add runit configuration for haproxy
+RUN mkdir -p /etc/service/haproxy
 ADD haproxy-runit /etc/service/haproxy/run
 RUN chmod 755 /etc/service/haproxy/run
 RUN sed -i 's/\r//' /etc/service/haproxy/run
@@ -29,6 +30,7 @@ RUN sed -i 's/\r//' /etc/dnsmasq.d/10-consul
 RUN echo '/etc/dnsmasq.d/10-consul' >> /etc/rc.d/rc.local
 
 # Add runit configuration for dnsmasq
+RUN mkdir -p /etc/service/dnsmasq
 ADD dnsmasq-runit /etc/service/dnsmasq/run
 RUN chmod 755 /etc/service/dnsmasq/run
 RUN sed -i 's/\r//' /etc/service/dnsmasq/run
