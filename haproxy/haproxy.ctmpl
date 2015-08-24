@@ -7,7 +7,6 @@ global
 defaults
   log     global
   mode    http
-  option  httplog
   option  dontlognull
   retries 3
   option redispatch
@@ -21,13 +20,10 @@ frontend http
   default_backend app
 
 listen app 0.0.0.0:80
-  mode http
-  stats enable
-  stats uri /stats
   balance roundrobin
   option  httplog
-  option  httpclose
-  option  forwardfor
+  stats enable
+  stats uri /stats
 {{range service "app"}}
     server {{.Node}} {{.Address}}:{{.Port}} weight 1
 {{end}}
