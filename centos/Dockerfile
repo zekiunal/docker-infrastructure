@@ -6,4 +6,4 @@ RUN yum clean all
 RUN yum -y install epel-release
 RUN yum -y update
 RUN yum -y install wget
-RUN yum -y unzip
+RUN yum -y install unzip
