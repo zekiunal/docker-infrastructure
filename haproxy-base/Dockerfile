@@ -18,4 +18,4 @@ RUN chmod 644 /etc/consul.d/bootstrap.json
 RUN wget https://github.com/hashicorp/consul-template/releases/download/v0.9.0/consul-template_0.9.0_linux_amd64.tar.gz
 RUN tar -xvzf consul-template_0.9.0_linux_amd64.tar.gz -C /opt/consul/
 RUN mv /opt/consul/consul-template_0.9.0_linux_amd64 /opt/consul/consul-template
-RUN rm consul-template_0.9.0_linux_amd64.tar.gz
+RUN rm -fr consul-template_0.9.0_linux_amd64.tar.gz
