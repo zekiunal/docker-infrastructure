@@ -19,7 +19,6 @@ if [[ -z ${IMAGE} ]]; then
   echo "Building image"
   docker build --no-cache -t ${TAG} .
 fi
-BIND=`ifconfig eth0 | grep "inet " | awk '{ print substr($2,1) }'`
 CID=$(docker run -d -p ${PORT} --dns 127.0.0.1 ${TAG})
 IP=$(docker inspect -f '{{ .NetworkSettings.IPAddress }}' ${CID})
 echo "Service running at $IP:$PORT"

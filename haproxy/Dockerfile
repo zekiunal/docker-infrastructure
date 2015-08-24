@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FROM monapi/haproxybase
+FROM monapi/ha-proxy-base
 
 ADD supervisord.conf /etc/supervisord.conf
 RUN chmod 644 /etc/supervisord.conf

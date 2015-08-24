@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAG="monapi/haproxybase"
+TAG="monapi/ha-proxy-base"
 IMAGE=$(docker images | grep "$TAG" | awk '{print $3}')
 
 if [[ -z ${IMAGE} ]]; then
