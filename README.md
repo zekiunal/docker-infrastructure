@@ -1,4 +1,10 @@
-# docker-infrastructure
+# docker-infrastructure - On-Centos 7
+
+## stacks
+
+* consul-server
+* haproxy
+* webserver
 
 ## pre-install
 
