@@ -1,3 +1,0 @@
-#!/bin/sh
-
-exec dnsmasq -C /etc/dnsmasq.d/10-consul
