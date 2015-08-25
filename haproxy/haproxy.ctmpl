@@ -5,8 +5,6 @@ global
   group haproxy
 
 defaults
-  stats enable
-  stats uri /stats
   log     global
   mode    http
   option  httplog
@@ -24,6 +22,8 @@ frontend http
 
 listen app 0.0.0.0:80
   mode http
+  stats enable
+  stats uri /stats
   balance roundrobin
   option  httplog
   option  httpclose
