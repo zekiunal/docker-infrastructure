@@ -37,6 +37,9 @@ RUN chmod +x start.sh
 ADD template.sh /template.sh
 RUN chmod +x template.sh
 
+ADD start.sh /kill.sh
+RUN chmod +x kill.sh
+
 CMD ["/usr/bin/supervisord"]
 
 EXPOSE 80
