@@ -7,4 +7,7 @@ chmod -R +xr /docker-infrastructure/
 cd /docker-infrastructure/
 ./install.sh
 
+
+
+
 haproxy döngü içinde şişyor.
