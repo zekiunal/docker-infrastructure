@@ -13,9 +13,6 @@ cd /docker-infrastructure/centos/
 cd /docker-infrastructure/consul-client/
 ./dockerize.sh
 
-cd /docker-infrastructure/haproxy-base/
-./dockerize.sh
-
 cd /docker-infrastructure/consul-server/
 ./run.sh
 
