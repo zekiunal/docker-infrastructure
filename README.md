@@ -1,6 +1,6 @@
 # docker-infrastructure
-"
 
+```bash
 cd /
 
 rm -fr /docker-infrastructure
@@ -12,7 +12,7 @@ chmod -R +xr /docker-infrastructure/
 cd /docker-infrastructure/
 
 ./install.sh
-
+```
 
 kill by name
 docker rm -f  $(docker ps -a | awk '/application/{print $1}')
