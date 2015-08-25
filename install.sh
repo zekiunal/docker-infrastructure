@@ -22,8 +22,8 @@ cd /docker-infrastructure/consul-server/
 CONSUL_SERVER_IP=$(docker inspect -f '{{ .NetworkSettings.IPAddress }}' consul_server)
 echo  ${CONSUL_SERVER_IP}
 
-#cd /docker-infrastructure/haproxy/
-#./run.sh ${CONSUL_SERVER_IP}
+cd /docker-infrastructure/haproxy/
+./run.sh ${CONSUL_SERVER_IP}
 
-#cd /docker-infrastructure/webserver/
-#./run.sh ${CONSUL_SERVER_IP}
+cd /docker-infrastructure/webserver/
+./run.sh ${CONSUL_SERVER_IP}
