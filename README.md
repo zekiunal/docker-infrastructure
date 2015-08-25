@@ -1,5 +1,41 @@
 # docker-infrastructure
 
+## pre-install
+
+```bash
+####################################################################################
+# Update CentOS 7
+####################################################################################
+yum update -y
+yum install -y epel-release
+yum update -y
+
+####################################################################################
+# Install Docker
+####################################################################################
+yum install -y docker
+
+####################################################################################
+# Docker to start at boot
+####################################################################################
+systemctl enable docker
+
+####################################################################################
+# start docker
+####################################################################################
+systemctl start docker
+
+
+####################################################################################
+# Install Git
+####################################################################################
+if ! rpm -qa | grep -qw git-core; then
+    yum install -y git-core
+    echo "git installed."
+fi
+
+```
+
 ## install
 
 ```bash
@@ -7,7 +43,7 @@ cd /
 
 rm -fr /docker-infrastructure
 
-git clone https://github.com/zekiunal/docker-infrastructure.git
+git clone --depth=1 git://github.com/zekiunal/docker-infrastructure.git
 
 chmod -R +xr /docker-infrastructure/
 
