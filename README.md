@@ -1,4 +1,4 @@
-# docker-infrastructure - On-Centos 7
+# docker-infrastructure - Centos 7
 
 ## stacks
 
