@@ -1,5 +1,7 @@
 # docker-infrastructure
 
+## install
+
 ```bash
 cd /
 
@@ -14,13 +16,13 @@ cd /docker-infrastructure/
 ./install.sh
 ```
 
-kill by name
+## kill all container by name
+```bash
 docker rm -f  $(docker ps -a | awk '/application/{print $1}')
+```
 
-
-$(docker inspect -f '{{ .NetworkSettings.IPAddress }}' consul_server)
-
-
-"
-
+## Get Consul Server IP
+```bash
+echo $(docker inspect -f '{{ .NetworkSettings.IPAddress }}' consul_server)
+```
 
