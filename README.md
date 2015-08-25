@@ -2,7 +2,7 @@
 
 ## stacks
 
-* consul-server
+* consul
 * haproxy
 * webserver
 
