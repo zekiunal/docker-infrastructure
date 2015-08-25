@@ -17,4 +17,10 @@ cd /docker-infrastructure/
 kill by name
 docker rm -f  $(docker ps -a | awk '/application/{print $1}')
 
+
+$(docker inspect -f '{{ .NetworkSettings.IPAddress }}' consul_server)
+
+
 "
+
+
