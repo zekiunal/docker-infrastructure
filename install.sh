@@ -1,10 +1,10 @@
 #!/bin/bash
 
 if [ ! $1 ]; then
-	docker rm -f $(docker ps -a -q)
-    docker rmi -f $(docker images -q)
-else
 	NEW=$1
+else
+	docker rm -f $(docker ps -a -q)
+    	docker rmi -f $(docker images -q)
 fi;
 
 cd /docker-infrastructure/centos/
